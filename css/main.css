@@ -54,6 +54,7 @@ label {
 }
 .wrapper--disabled .form-control[disabled] {
   border-width: 5px;
+  font-weight: 700;
 }
 .wrapper--disabled::after {
   top: 10px;
