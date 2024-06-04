@@ -1,0 +1,114 @@
+@charset "UTF-8";
+body, html {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #212529;
+}
+
+.site-container {
+  min-height: 100%;
+  padding: 50px 20px;
+}
+
+label {
+  color: var(--bs-light);
+}
+
+.tooltip-parent > input, .tooltip-parent > select {
+  background-color: transparent;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+.tooltip-parent > input option, .tooltip-parent > select option {
+  background-color: #212529;
+}
+.tooltip-parent > input[disabled], .tooltip-parent > select[disabled] {
+  background-color: transparent;
+  color: #ccc;
+}
+.tooltip-parent > input:hover + .tooltip-text, .tooltip-parent > select:hover + .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+}
+.tooltip-parent > input:focus, .tooltip-parent > select:focus {
+  background-color: transparent;
+  color: #fff;
+}
+
+.wrapper {
+  position: relative;
+}
+.wrapper::after {
+  content: "₽";
+  position: absolute;
+  z-index: 99;
+  right: 30px;
+  top: 6px;
+  color: #fff;
+}
+.wrapper--select::after {
+  content: "%";
+}
+
+.tooltip-text {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #212529;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+@media (max-width: 1024px) {
+  .tooltip-text {
+    position: static;
+    opacity: 1;
+    padding: 0;
+    max-width: unset;
+    border-radius: 0;
+    color: #fff;
+    visibility: visible;
+    background-color: unset;
+  }
+}
+.tooltip-text .arrow {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+  transform: translateX(-50%);
+}
+@media (max-width: 1024px) {
+  .tooltip-text .arrow {
+    display: none;
+  }
+}
+.tooltip-text .arrow--reverse {
+  bottom: unset;
+  top: -6px;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.form {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #4a5158;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 30px;
+  }
+}/*# sourceMappingURL=main.css.map */

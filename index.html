@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Document</title>
+
+  <script src="./js/bootstrap.min.js" defer></script>
+  <script src="./js/popper.js" defer></script>
+  <script src="./js/main.js" type="module" defer></script>
+</head>
+<body>
+  <div class="site-container">
+    <main>
+      <div class="container-lg">
+        <div class="row">
+          <div class="col">
+            <form class="form">
+              <div class="mb-3">
+                <label for="monthlypass" class="form-label">Ежемесячный пассивный доход</label>
+                <div class="wrapper  tooltip-parent">
+                  <input id="monthlypass" value="10000" type="number" min="10000" max="5000000" class="form-control" placeholder="Ежемесячный пассивный доход">
+                  <div class="form-text tooltip-text"><span class="arrow"></span>введите сумму, которую вы хотите получать в месяц пассивного дохода от инвестиций</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Ставка годовых</label>
+                <div class="wrapper wrapper--select  tooltip-parent">
+                  <select class="form-select" id="bidyear">
+                    <option value="0.06" selected>6</option>
+                    <option value="0.08">8</option>
+                    <option value="0.1">10</option>
+                  </select>
+                  <div class="form-text tooltip-text"><span class="arrow"></span>введите ставку, под которую будет лежать ваш капитал уже после формирования (агрессивный инвестор - 10%, умеренный инвестор - 8%, консервативный инвестор - 6%)</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="capital" class="form-label">Капитал</label>
+                <div class="wrapper  tooltip-parent">
+                  <input type="number" class="form-control" id="capital" disabled placeholder="Капитал">
+                  <div class="form-text tooltip-text"><span class="arrow"></span>Это капитал, который нужен вам, для получения пассивного дохода</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Ставка годовых</label>
+                <div class="wrapper wrapper--select  tooltip-parent">
+                  <select class="form-select" id="bidsec">
+                    <option value="0.1" >10</option>
+                    <option value="0.15" selected>15</option>
+                    <option value="0.2">20</option>
+                  </select>
+                  <div class="form-text tooltip-text"><span class="arrow"></span>введите ставку,  под которую вы инвестируете, чтобы достичь необходимого капитала (агрессивный инвестор - 20%, умеренный инвестор - 15%, консервативный инвестор - 10%)</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="yearstogoal" class="form-label">Лет до достижения цели</label>
+                 <div class="wrapper  tooltip-parent">
+                   <input id="yearstogoal" value="1" type="number" min="1" max="30" class="form-control" placeholder="Лет до достижения цели">
+                   <div class="form-text tooltip-text"><span class="arrow"></span>введите кол-во лет, через сколько вы хотите получать пассивный доход</div>
+                 </div>
+              </div>
+              <div class="mb-3">
+                <label for="firstcapital" class="form-label">Первоначальный капитал</label>
+                 <div class="wrapper  tooltip-parent">
+                   <input id="firstcapital" value="0" type="number" min="0" max="30000000" class="form-control" placeholder="Первоначальный капитал">
+                   <div class="form-text tooltip-text"><span class="arrow"></span>Введите сумму первоначального капитала</div>
+                 </div>
+              </div>
+              <div class="mb-3">
+                <label for="monthlysum" class="form-label">Ежемесячная сумма</label>
+                 <div class="wrapper  tooltip-parent">
+                   <input id="monthlysum" type="number" class="form-control" min="0" disabled placeholder="Ежемесячная сумма">
+                   <div class="form-text tooltip-text"><span class="arrow"></span>сумма, которую необходимо каждый месяц откладывать, чтобы достичь необходимого капитала</div>
+                 </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col">
+            <form class="form">
+              <div class="mb-3">
+                <label for="capitalsize" class="form-label">Капитал</label>
+                <div class="wrapper tooltip-parent">
+                  <input id="capitalsize" value="10000000" type="number" min="100000" max="100000000" class="form-control" placeholder="Ежемесячный пассивный доход">
+                  <div class="form-text tooltip-text"><span class="arrow"></span>введите размер капитала, который нужен вам, для выполнения вашей цели</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Ставка годовых</label>
+                <div class="wrapper wrapper--select tooltip-parent">
+                  <select class="form-select" id="bidinvest">
+                    <option value="0.2" >20</option>
+                    <option value="0.15" selected>15</option>
+                    <option value="0.1">10</option>
+                  </select>
+                  <div class="form-text tooltip-text"><span class="arrow"></span>введите ставку, под которую планируете инвестировать (агрессивный инвестор - 20%, умеренный инвестор - 15%, консервативный инвестор - 10%)</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="yearstogoal2" class="form-label">Лет до достижения цели</label>
+                <div class="wrapper tooltip-parent">
+                  <input id="yearstogoal2" value="3" type="number" min="1" max="30" class="form-control" placeholder="Лет до достижения цели">
+                  <div class="form-text tooltip-text"><span class="arrow"></span>введите кол-во лет, через сколько вы хотите получать пассивный доход</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="firstcapital2" class="form-label">Первоначальный капитал</label>
+                 <div class="wrapper tooltip-parent">
+                   <input id="firstcapital2" value="0" type="number" min="0" max="30000000" class="form-control" placeholder="Первоначальный капитал">
+                   <div class="form-text tooltip-text"><span class="arrow"></span>Введите сумму первоначального капитала</div>
+                 </div>
+              </div>
+              <div class="mb-3">
+                <label for="monthlysum2" class="form-label">Ежемесячная сумма</label>
+                 <div class="wrapper tooltip-parent">
+                   <input id="monthlysum2" type="text" class="form-control" min="0" disabled placeholder="Ежемесячная сумма">
+                   <div class="form-text tooltip-text"><span class="arrow"></span>сумма, которую необходимо каждый месяц откладывать, чтобы достичь необходимого капитала</div>
+                 </div>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+  </div>
+</body>
+</html>
