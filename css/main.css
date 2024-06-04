@@ -52,6 +52,13 @@ label {
 .wrapper--select::after {
   content: "%";
 }
+.wrapper--disabled .form-control[disabled] {
+  border-width: 5px;
+}
+.wrapper--disabled::after {
+  top: 10px;
+  font-weight: 700;
+}
 
 .tooltip-text {
   position: absolute;

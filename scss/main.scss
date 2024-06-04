@@ -54,6 +54,15 @@ label {
             content: "%";
         }
     }
+    &--disabled {
+        .form-control[disabled]{
+            border-width: 5px;
+        }
+        &::after {
+            top: 10px;
+            font-weight: 700;
+        }
+    }
 }
 .tooltip-text {
     position: absolute;
@@ -112,3 +121,4 @@ label {
         gap: 30px;
     }
 }
+

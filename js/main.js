@@ -87,6 +87,37 @@ const firstcapital2 = document.querySelector('#firstcapital2') // Первона
 
 const monthlysum2 = document.querySelector('#monthlysum2') // Ежемесячная сумма
 
+capitalsize.addEventListener('change', () => {
+    if(+capitalsize.value > +capitalsize.max){
+        capitalsize.value = capitalsize.max
+    } else if (+capitalsize.value < +capitalsize.min){
+        capitalsize.value = capitalsize.min
+    }
+    writeMonthlySum2()
+})
+
+bidinvest.addEventListener('change', () => {
+    writeMonthlySum2()
+})
+
+yearstogoal2.addEventListener('change', () => {
+    if(+yearstogoal2.value > +yearstogoal2.max){
+        yearstogoal2.value = yearstogoal2.max
+    } else if (+yearstogoal2.value < +yearstogoal2.min){
+        yearstogoal2.value = yearstogoal2.min
+    }
+    writeMonthlySum2()
+})
+
+firstcapital2.addEventListener('change', () => {
+    if(+firstcapital2.value > +firstcapital2.max){
+        firstcapital2.value = firstcapital2.max
+    } else if (+firstcapital2.value < +firstcapital2.min){
+        firstcapital2.value = firstcapital2.min
+    }
+    writeMonthlySum2()
+})
+
 function calculateMonthlySum2(){
     const S = (capitalsize.value - (firstcapital2.value * Math.pow((1 + bidinvest.value / 12), 12 * yearstogoal2.value)) ) / ( 12 / bidinvest.value * (Math.pow((1 + bidinvest.value / 12), 12 * yearstogoal2.value) - 1))
     return Math.max(Math.ceil(S, 0));
@@ -95,6 +126,10 @@ function writeMonthlySum2(){
     monthlysum2.value = calculateMonthlySum2()
 }
 writeMonthlySum2()
+
+
+
+
 
 const changePosition = {
     name: 'changePosition',
